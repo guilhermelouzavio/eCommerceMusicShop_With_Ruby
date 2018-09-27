@@ -1,39 +1,22 @@
-<p id="notice"><%= notice %></p>
+<% content_for :body_class , 'bg-light' %>
 
-<p>
-  <strong>Brand:</strong>
-  <%= @instrument.brand %>
-</p>
+<div class="section instrument-show">
+  <div class="columns">
+    <div class="column is-8">
+      <h1><%= @instrument.title %></h1>
 
-<p>
-  <strong>Model:</strong>
-  <%= @instrument.model %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @instrument.description %>
-</p>
-
-<p>
-  <strong>Condition:</strong>
-  <%= @instrument.condition %>
-</p>
-
-<p>
-  <strong>Finish:</strong>
-  <%= @instrument.finish %>
-</p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @instrument.title %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  <%= @instrument.price %>
-</p>
-
-<%= link_to 'Edit', edit_instrument_path(@instrument) %> |
-<%= link_to 'Back', instruments_path %>
+      <ul class="pv1">
+        <% if @instrument.brand? %>
+         <li class="inline-block pr3"><%= @instrument.brand %></li>
+          <% end %>
+        <% if @instrument.model? %>
+          <li class="inline-block pr3"><%= @instrument.model %></li>
+        <% end %>
+        <% if @instrument.condition? %>
+          <li class="inline-block pr3"><%= @instrument.condition %></li>
+        <% end %>
+      </ul>
+    </div>
+    <div class="column is-3 is-offset-1"></div>
+  </div>
+</div>

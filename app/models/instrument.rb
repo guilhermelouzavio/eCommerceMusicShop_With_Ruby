@@ -8,7 +8,7 @@ class Instrument < ApplicationRecord
   validates :title , length: {maximum: 140 , too_long: "%{count} characteres is  the maximum aloud."}
   validates :price , numericality: {only_integer: true } , length: {maximum: 7}
 
-  BRAND = %w{ Fender Gibson Epiphone ESP Martin Dean Taylor Jackson PRS  Ibanez Charvel Washburn }
+  BRAND = %w{ Fiat Volkswagen Honda Citroen Ford Bmw Ferrari Audi Lifan Hyunday Chevrolet Mini AlfaRomeo }
   FINISH = %w{ Black White Navy Blue Red Clear Satin Yellow Seafoam }
   CONDITION = %w{ New Excellent Mint Used Fair Poor }
 
